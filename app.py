@@ -1,48 +1,10 @@
-# import streamlit as st
-# import pandas as pd
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-
-# st.set_page_config(page_title="Marketing Campaign Analytics", layout="wide")
-
-# @st.cache_data
-# def load_data():
-#     return pd.read_csv("data/marketing_final.csv")
-
-# df = load_data()
-
-# st.title("📊 Marketing Campaign Analytics Dashboard")
-
-# # Sidebar filters
-# country = st.sidebar.multiselect("Country", df['Country'].unique())
-# if country:
-#     df = df[df['Country'].isin(country)]
-
-# st.metric("Total Customers", len(df))
-# st.metric("Response Rate (%)", round(df['Response'].mean()*100, 2))
-# st.metric("Average Spend", round(df['Total_Spend'].mean(), 2))
-
-# st.divider()
-
-# st.subheader("Spending vs Age")
-# fig, ax = plt.subplots()
-# sns.scatterplot(x='Age', y='Total_Spend', hue='Response', data=df, ax=ax)
-# st.pyplot(fig)
-
-# st.subheader("Web Visits vs Response")
-# fig, ax = plt.subplots()
-# sns.boxplot(x='Response', y='NumWebVisitsMonth', data=df, ax=ax)
-# st.pyplot(fig)
-
-# st.success("Dashboard Ready 🚀")
-
 import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
-# ---------------- CONFIG ----------------
+# ---------------- CONFIGURATION ----------------
 st.set_page_config(
     page_title="Marketing Campaign Analytics",
     page_icon="📊",
